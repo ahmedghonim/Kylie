@@ -81,7 +81,7 @@ For STT, whisper-large-v3-turbo from Groq.
 I'll shared about the audio module in module 4 and the image module in module 5!
 
 
-# Module 2 (Disecting Kylie's Brain)
+## Module 2 (Disecting Kylie's Brain)
 
 Picture this: you’re a mad scientist living in a creepy old house in the middle of the forest, and your mission is to build a sentient robot. What’s the first thing you’d do?
 
@@ -216,7 +216,7 @@ But of course, we don’t want to generate a summary every single time Kylie get
 
 As you can see in the implementation above, this edge connects the summarization node to the previous nodes if the total number of messages exceeds the TOTAL_MESSAGES_SUMMARY_TRIGGER (which is set to 100 by default in settings.py). If not, it will connect to the END node, which marks the end of the workflow
 
-# Module 3 (Kylie's Memory)
+## Module 3 (Kylie's Memory)
 
 ![Alt text](./images/img9.png)
 
@@ -271,7 +271,7 @@ This node uses the MemoryManager class to retrieve relevant memories from Qdrant
 
 Once that's done, the formatted memories are stored in the memory_context property of the graph. This allows them to be parsed into the Character Card Prompt - the one that defines Kylie's personality and behaviour.
 
-# Module 4 (Kylie's Voice)
+## Module 4 (Kylie's Voice)
 
 Kylie's audio pipeline works a lot like the vision pipeline.
 
@@ -314,7 +314,7 @@ The synthesize method then generates the audio bytes and stores them in the Lang
 Finally, the audio gets sent back to the user via the WhatsApp endpoint hook, giving them a voice representation of what Kylie is saying!
 
 
-# Module 5 (Kylie's Vision)
+## Module 5 (Kylie's Vision)
 
 ![Alt text](./images/img14.png)
 
